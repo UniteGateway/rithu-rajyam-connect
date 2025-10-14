@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import SocialIcons from "./SocialIcons";
+import AppDownloadButtons from "./AppDownloadButtons";
 
 const Footer = () => {
   const quickLinks = [
@@ -20,13 +22,6 @@ const Footer = () => {
     { label: "Training Calendar", path: "/csr#training" },
   ];
 
-  const socialLinks = [
-    { icon: Facebook, url: "#", label: "Facebook" },
-    { icon: Twitter, url: "#", label: "Twitter" },
-    { icon: Instagram, url: "#", label: "Instagram" },
-    { icon: Youtube, url: "#", label: "YouTube" },
-    { icon: Linkedin, url: "#", label: "LinkedIn" },
-  ];
 
   return (
     <footer className="bg-primary text-primary-foreground pt-16 pb-8">
@@ -97,17 +92,12 @@ const Footer = () => {
           {/* Connect */}
           <div>
             <h4 className="font-bold text-lg mb-4">Connect With Us</h4>
-            <div className="flex gap-3 mb-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.url}
-                  aria-label={social.label}
-                  className="bg-primary-foreground/10 hover:bg-primary-foreground/20 p-2 rounded-lg transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+            <div className="mb-6">
+              <SocialIcons />
+            </div>
+            <div className="mb-6">
+              <h5 className="font-semibold mb-3">Download App</h5>
+              <AppDownloadButtons />
             </div>
             <div className="bg-primary-foreground/10 p-4 rounded-lg">
               <h5 className="font-semibold mb-2">WhatsApp Community</h5>
