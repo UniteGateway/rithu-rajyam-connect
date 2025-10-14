@@ -14,7 +14,77 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      dpr_downloads: {
+        Row: {
+          downloaded_at: string | null
+          dpr_name: string
+          id: string
+          user_id: string | null
+        }
+        Insert: {
+          downloaded_at?: string | null
+          dpr_name: string
+          id?: string
+          user_id?: string | null
+        }
+        Update: {
+          downloaded_at?: string | null
+          dpr_name?: string
+          id?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "dpr_downloads_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          auth_user_id: string | null
+          created_at: string | null
+          district: string | null
+          email: string
+          full_name: string
+          id: string
+          metadata: Json | null
+          mobile: string | null
+          role: string
+          state: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          auth_user_id?: string | null
+          created_at?: string | null
+          district?: string | null
+          email: string
+          full_name: string
+          id?: string
+          metadata?: Json | null
+          mobile?: string | null
+          role: string
+          state?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          auth_user_id?: string | null
+          created_at?: string | null
+          district?: string | null
+          email?: string
+          full_name?: string
+          id?: string
+          metadata?: Json | null
+          mobile?: string | null
+          role?: string
+          state?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
