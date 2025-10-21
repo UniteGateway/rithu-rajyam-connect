@@ -86,8 +86,8 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-            <Button variant="default" size="sm" className="ml-4">
-              Register
+            <Button variant="default" size="sm" className="ml-4" asChild>
+              <Link to="/register-farmer">Register</Link>
             </Button>
           </div>
 
@@ -129,8 +129,8 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-            <Button variant="default" className="w-full mt-4">
-              Register
+            <Button variant="default" className="w-full mt-4" asChild>
+              <Link to="/register-farmer">Register</Link>
             </Button>
           </div>
         )}

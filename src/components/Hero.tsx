@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" variant="secondary" className="font-semibold">
+            <Button size="lg" variant="secondary" className="font-semibold" onClick={() => window.location.href = '/register-farmer'}>
               Register as Farmer
             </Button>
             <Button size="lg" variant="outline" className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary">

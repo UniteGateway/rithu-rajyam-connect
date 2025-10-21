@@ -7,6 +7,7 @@ import AppDownloadButtons from "./AppDownloadButtons";
 const Footer = () => {
   const quickLinks = [
     { label: "About Us", path: "/about" },
+    { label: "Register as Farmer", path: "/register-farmer" },
     { label: "Projects", path: "/projects" },
     { label: "Banking", path: "/banking" },
     { label: "Community", path: "/community" },

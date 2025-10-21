@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Advisors from "./pages/Advisors";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
+import RegisterFarmer from "./pages/RegisterFarmer";
+import ThankYou from "./pages/ThankYou";
 import FarmerDashboard from "./pages/dashboard/Farmer";
 import BuyerDashboard from "./pages/dashboard/Buyer";
 import ImporterDashboard from "./pages/dashboard/Importer";
@@ -46,6 +48,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/register-farmer" element={<RegisterFarmer />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/dashboard/farmer" element={<FarmerDashboard />} />
           <Route path="/dashboard/buyer" element={<BuyerDashboard />} />
           <Route path="/dashboard/importer" element={<ImporterDashboard />} />
